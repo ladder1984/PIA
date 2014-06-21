@@ -1,6 +1,6 @@
 PIA
 ===
-PIA个人信息助理
+PIA（Personal Information Assistant）个人信息助理
 
 ##代码说明
 开发语言：Java  
