@@ -10,8 +10,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
-
 public class pwdBLL{            //Âß¼­´¦ÀíÀà£¬ÓÉ½çÃæÀà»ñµÃÄÚÈİ£¬Éú³ÉsqlÓï¾ä²¢Ö´ĞĞ
     private static JTable table;        //´´½¨±í¸ñ±äÁ¿
 
@@ -100,6 +98,5 @@ public class pwdBLL{            //Âß¼­´¦ÀíÀà£¬ÓÉ½çÃæÀà»ñµÃÄÚÈİ£¬Éú³ÉsqlÓï¾ä²¢Ö´Ğ
         sql="DELETE FROM pwd WHERE  ID= "+ID;   //Éú³ÉsqlÓï¾ä
         DB.sql(sql);            //Ö´ĞĞÉ¾³ıÓï¾ä
     }
-
 
 }

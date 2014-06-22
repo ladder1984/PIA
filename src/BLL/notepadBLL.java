@@ -1,3 +1,5 @@
+//注释参见pwdBLL.java
+
 package BLL;
 
 import DAL.DB;
@@ -8,19 +10,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-/**
- * Created by Administrator on 2014/6/16.
- */
 public class notepadBLL {
     private static JTable table;
-
     private static DefaultTableModel tableModel;
-
     static String  sql=null;
 
     public notepadBLL(){
-
-
 
     }
     public static JTable getJTable() {      //建立并返回JTable
@@ -56,8 +51,6 @@ public class notepadBLL {
         cols.addElement("备注");
         tableModel = new DefaultTableModel(data, cols);
         table = new JTable(tableModel);
-
-
         return table;
     }
 
@@ -68,11 +61,9 @@ public class notepadBLL {
         caption="'"+caption+"'";
         comments="'"+comments+"'";
         sql="INSERT INTO Notepad (mydate,sort,caption,comments) VALUES "+ "(" + mydate + ","+sort+"," +caption + "," + comments + ")";
+        DB.sql(sql);
 
-         DB.sql(sql);
-
-      String sql2= "Select * from Notepad where caption="+caption;
-
+        String sql2= "Select * from Notepad where caption="+caption;
         ResultSet rs=DB.sqlQuery(sql2);
 
         try {
@@ -100,8 +91,6 @@ public class notepadBLL {
 
         DB.sql(sql);
     }
-
-
 
     public static void delete(String ID) {
         sql="DELETE FROM Notepad WHERE  ID= "+ID;

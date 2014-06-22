@@ -1,7 +1,5 @@
 package UI;
 
-
-
 import BLL.LoginBLL;
 
 import javax.swing.*;
@@ -11,11 +9,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
-/**
- * Created by Administrator on 2014/6/15.
- */
-public class loginDialog extends JDialog {      //软件启动时的登陆对话框
 
+public class loginDialog extends JDialog {      //软件启动时的登陆对话框
 
     public loginDialog(MainFrame frame) {
         super(frame,true);
@@ -55,7 +50,6 @@ public class loginDialog extends JDialog {      //软件启动时的登陆对话框
             }
         });
 
-
         JButton cancelBtn=new JButton("取消");        //取消按钮
         cancelBtn.addActionListener(new ActionListener() {  //用户取消登录则退出软件
             @Override
@@ -65,7 +59,6 @@ public class loginDialog extends JDialog {      //软件启动时的登陆对话框
         });
         contentPanel.add(okBtn);
         contentPanel.add(cancelBtn);
-
 
         addWindowListener(new WindowAdapter() {     //用户关闭对话框则退出软件
             public void windowClosing(WindowEvent e) {
@@ -77,6 +70,5 @@ public class loginDialog extends JDialog {      //软件启动时的登陆对话框
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
-
     }
 }

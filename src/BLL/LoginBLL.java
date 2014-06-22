@@ -33,9 +33,7 @@ public class LoginBLL {     //登陆逻辑处理类
         else
             result=0;   //校验失败返回2
 
-
         DB.close();     //关闭数据库连接
-
         return result;
     }
 }

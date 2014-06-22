@@ -12,9 +12,6 @@ import java.awt.event.WindowEvent;
 
 import static BLL.passMaintainBLL.*;
 
-/**
- * Created by Administrator on 2014/6/15.
- */
 public class passMaintainDialog extends JDialog{        //登陆权限维护界面类
     public passMaintainDialog(MainFrame mainFrame) {
         super(mainFrame,true);
@@ -48,7 +45,6 @@ public class passMaintainDialog extends JDialog{        //登陆权限维护界面类
             }
         });
 
-
         JButton cancelBtn=new JButton("取消");        //点击取消按钮关闭对话框
         cancelBtn.addActionListener(new ActionListener() {
             @Override
@@ -59,14 +55,9 @@ public class passMaintainDialog extends JDialog{        //登陆权限维护界面类
         contentPanel.add(okBtn);
         contentPanel.add(cancelBtn);
 
-
-
-
         setSize(200,150);
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
     }
-
-
 }

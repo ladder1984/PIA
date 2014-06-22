@@ -21,18 +21,14 @@ public class MainFrame  extends JFrame{
         JPanel contentPanel=new JPanel(new BorderLayout()); //创建主面板
         this.setContentPane(contentPanel);
 
-
         JLabel infoJbl=new JLabel("个人信息助理");
         infoJbl.setFont(new   java.awt.Font("Dialog",   1,   15));  //设置字体
-
 
         JPanel centerJp=new JPanel(new BorderLayout());     //穿件center显示面板
         centerJp.add(infoJbl,BorderLayout.CENTER);
         contentPanel.add(centerJp,BorderLayout.CENTER);
         addMenu();      //添加菜单
         addToolbar();   //添加工具栏
-
-
     }
 
     private void addToolbar() {         //添加工具栏
@@ -93,8 +89,6 @@ public class MainFrame  extends JFrame{
         myTooBar.add(addrBookBtn,null);
         myTooBar.add(pwdBtn,null);
         myTooBar.add(dbMaintainBtn,null);
-
-
     }
 
     private void addMenu() {        //添加菜单
@@ -147,7 +141,6 @@ public class MainFrame  extends JFrame{
         helpMenu.add(helpBookItem);
         helpMenu.add(aboutItem);
 
-
         setSize(600, 400);          //设置窗口参数
         setLocationRelativeTo(null);
         setVisible(true);
@@ -163,6 +156,4 @@ public class MainFrame  extends JFrame{
         });
 
     }
-
-
 }

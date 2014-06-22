@@ -6,10 +6,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
-
-/**
- * Created by Administrator on 2014/6/15.
- */
 public class dbMaintainDialog extends JDialog{      //数据库维护界面类
 
     public dbMaintainDialog(MainFrame mainFrame) {

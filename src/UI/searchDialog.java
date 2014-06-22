@@ -8,9 +8,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 
-/**
- * Created by Administrator on 2014/6/15.
- */
 public class searchDialog extends JDialog{      //搜索对话框
     
     static int selectedItem;
@@ -69,8 +66,6 @@ public class searchDialog extends JDialog{      //搜索对话框
     }
 
     public static String getSearchText() {      //外部调用，返回搜索内容
-
         return searchText;
-
     }
 }

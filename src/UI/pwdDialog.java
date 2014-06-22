@@ -10,9 +10,7 @@ import java.util.Vector;
 import javax.swing.*;
 import javax.swing.table.*;
 import BLL.pwdBLL;
-/**
- * Created by Administrator on 2014/6/15.
- */
+
 public class pwdDialog extends JDialog{
 
     private static JTable table;        //显示与输入的文本框
@@ -21,7 +19,6 @@ public class pwdDialog extends JDialog{
     private static JTextField pwdText;
     private static JTextField commentsText;
     String[] items={"名称","密码","备注"};    //列名数列，用于传递给搜索对话框
-
 
     public pwdDialog(MainFrame mainFrame) {
         super(mainFrame,true);
@@ -39,7 +36,6 @@ public class pwdDialog extends JDialog{
 
         JPanel controlPanel=new JPanel(new BorderLayout());     //创建放置控制按钮的面板
         contentPanel.add(controlPanel,BorderLayout.SOUTH);
-
 
         JPanel textPanel=new JPanel();                  //创建显示文本框的面板
         controlPanel.add(textPanel,BorderLayout.NORTH);
@@ -60,8 +56,6 @@ public class pwdDialog extends JDialog{
         textPanel.add(new JLabel("备注: "));
         commentsText=new JTextField(10);
         textPanel.add(commentsText);
-
-
 
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);  //选择模式为单选
         table.addMouseListener(new MouseAdapter(){    //鼠标事件
@@ -133,7 +127,6 @@ public class pwdDialog extends JDialog{
         });
         buttonPanel.add(delButton);
 
-
         final JButton searchButton = new JButton("搜索");     //搜索按钮
         searchButton.addActionListener(new ActionListener(){//添加事件
             public void actionPerformed(ActionEvent e){
@@ -177,9 +170,5 @@ public class pwdDialog extends JDialog{
         setSize(800, 400);          //设置对话框参数
         this.setLocationRelativeTo(null);
         setVisible(true);
-
-
     }
-
-
 }

@@ -1,3 +1,4 @@
+//注释参见pwdBLL.java
 package BLL;
 
 import DAL.DB;
@@ -8,8 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Vector;
 
-
-
 public class addrBookBLL{
     private static JTable table;
 
@@ -19,8 +18,6 @@ public class addrBookBLL{
 
     public addrBookBLL(){
 
-
-
     }
 
     public static JTable getJTable(){   //建立并返回JTable
@@ -29,9 +26,7 @@ public class addrBookBLL{
 
         Vector data = new Vector();
         Vector dataRow = new Vector();
-
         ResultSet rs=DB.sqlQuery(sql);
-
         int colNum=6;
 
         try {
@@ -58,8 +53,6 @@ public class addrBookBLL{
         cols.addElement("地址");
         tableModel = new DefaultTableModel(data, cols);
         table = new JTable(tableModel);
-
-
         return table;
     }
 
@@ -75,7 +68,6 @@ public class addrBookBLL{
 
         DB.sql(sql);
 
-
         String sql2= "Select * from AddrBook where name="+name;
         int resultID = -1;
         ResultSet rs=DB.sqlQuery(sql2);
@@ -84,14 +76,10 @@ public class addrBookBLL{
             while (rs.next()){
                 resultID=rs.getInt("ID");
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return resultID;
-
-
     }
 
     public static void update(String ID,String name, String sex, String phone, String email, String address){
@@ -105,21 +93,15 @@ public class addrBookBLL{
 
                 ID+","+name + ","+ sex+ ","+phone+ ","+email+ ","+address
                 +")";
-
-
         sqlDelete="DELETE FROM AddrBook WHERE  ID= "+ID;
 
         DB.sql(sqlDelete);
         DB.sql(sql);
-
 }
-
     public static void delete(String ID) {
         sql="DELETE FROM AddrBook WHERE  ID= "+ID;
         DB.sql(sql);
 
     }
-
-
 
 }

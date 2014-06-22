@@ -10,8 +10,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-
-
 public class addrBookDialog extends JDialog {
 
     private static JTable table;
@@ -36,10 +34,8 @@ public class addrBookDialog extends JDialog {
         final DefaultTableModel tableModel= (DefaultTableModel) table.getModel();
         tablePanel.setViewportView(table);
 
-
         JPanel controlPanel=new JPanel(new BorderLayout());
         contentPanel.add(controlPanel,BorderLayout.SOUTH);
-
 
         JPanel textPanel=new JPanel(new GridLayout(2,2));
         controlPanel.add(textPanel,BorderLayout.NORTH);
@@ -47,7 +43,6 @@ public class addrBookDialog extends JDialog {
         textPanel.add(new JLabel("　　　　编号: "));  //添加文本框
         IDLabel=new JLabel("编号");
         textPanel.add(IDLabel);
-
 
         textPanel.add(new JLabel("　　　　姓名: "));
         nameText=new JTextField(10);
@@ -57,12 +52,9 @@ public class addrBookDialog extends JDialog {
         sexText=new JTextField(10);
         textPanel.add(sexText);
 
-
-
         textPanel.add(new JLabel("　　　　电话: "));
         phoneText=new JTextField(10);
         textPanel.add(phoneText);
-
 
         textPanel.add(new JLabel("　　　　电子邮件: "));
         emailText=new JTextField(10);
@@ -111,8 +103,6 @@ public class addrBookDialog extends JDialog {
             }
         });
         buttonPanel.add(addButton);
-
-
 
         final JButton updateButton = new JButton("修改");   //添加按钮
         updateButton.addActionListener(new ActionListener(){//添加事件
@@ -190,8 +180,6 @@ public class addrBookDialog extends JDialog {
         });
         buttonPanel.add(searchButton);
         searchButton.setToolTipText("符合结果将高亮，无搜索结果则无高亮");
-
-
 
         setSize(800, 400);
         this.setLocationRelativeTo(null);

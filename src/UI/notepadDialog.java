@@ -9,9 +9,7 @@ import java.util.Vector;
 import javax.swing.*;
 import javax.swing.table.*;
 import BLL.*;
-/**
- * Created by Administrator on 2014/6/15.
- */
+
 public class notepadDialog extends JDialog{
 
     private static JTable table;
@@ -66,8 +64,6 @@ public class notepadDialog extends JDialog{
         commentsText=new JTextField(10);
         textPanel.add(commentsText);
 
-
-
         table.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);  //单选
         table.addMouseListener(new MouseAdapter(){    //鼠标事件
             public void mouseClicked(MouseEvent e){
@@ -105,8 +101,6 @@ public class notepadDialog extends JDialog{
         });
         buttonPanel.add(addButton);
 
-
-
         final JButton updateButton = new JButton("修改");   //添加按钮
         updateButton.addActionListener(new ActionListener(){//添加事件
             public void actionPerformed(ActionEvent e){
@@ -126,7 +120,6 @@ public class notepadDialog extends JDialog{
             }
         });
         buttonPanel.add(updateButton);
-
 
         final JButton delButton = new JButton("删除");
         delButton.addActionListener(new ActionListener(){//添加事件
@@ -190,6 +183,4 @@ public class notepadDialog extends JDialog{
 
 
     }
-
-
 }

@@ -2,9 +2,6 @@ package BLL;
 
 import DAL.DB;
 
-/**
- * Created by Administrator on 2014/6/15.
- */
 public class passMaintainBLL {
     private static String sql;
 
