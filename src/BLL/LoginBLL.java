@@ -5,9 +5,6 @@ import DAL.DB;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * Created by Administrator on 2014/6/15.
- */
 public class LoginBLL {     //µÇÂ½Âß¼­´¦ÀíÀà
 
     public static int check(String name, String pass) {

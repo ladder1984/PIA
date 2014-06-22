@@ -1,7 +1,3 @@
-/**
- * Created by Administrator on 2014/6/7.
- */
-
 import DAL.DB;
 import UI.MainFrame;
 
