@@ -1,7 +1,6 @@
 PIA
 ===
 PIA（Personal Information Assistant）个人信息助理
-
 ##代码说明
 开发语言：Java  
 JDK版本：开发jdk为jdk1.7.0_55，理论可使用于非古老版本的jdk  
@@ -18,3 +17,9 @@ JDK版本：开发jdk为jdk1.7.0_55，理论可使用于非古老版本的jdk
 3. 通讯簿
 4. 系统维护
 
+
+
+
+
+
+详见http://www.itoldme.net/archives/1126
